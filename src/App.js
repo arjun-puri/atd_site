@@ -1,26 +1,61 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom"; 
 
-function App() {
+import History from "./components/History";
+import Realtime from "./components/Realtime";
+
+
+import { Button, Typography } from "antd";
+
+const { Title } = Typography;
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<div> 
+<Title class="site-page-title">Anti Theft Device Dashboard</Title>
+
+    <Router>
+      <div class="site-page-nav">
+        <nav>
+                     
+              <Link to="/history">
+                <Button>History</Button>
+              </Link>
+            
+              <Link to="/realtime">
+                <Button>Realtime</Button>
+              </Link>
+           
+        </nav>
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/history">
+            <History />
+          </Route>
+          <Route path="/realtime">
+            <Realtime />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
     </div>
   );
 }
 
-export default App;
+
+
+// function History() {
+//   return <h2>About</h2>;
+// }
+
+// function Realtime() {
+//   return <h2>Users</h2>;
+// }
