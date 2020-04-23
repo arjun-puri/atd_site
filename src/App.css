@@ -1,3 +1,14 @@
+.home {
+  /*align-content: center;
+  align-items: center;*/
+
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /*font-size: 12px;*/
+}
+
 .root {
   /*background-color: #7f8b93;*/
   background-color: #ececec;

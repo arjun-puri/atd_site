@@ -264,7 +264,7 @@ class RealtimeMode extends React.Component {
   // }
 
   realtimeFetchData() {
-    var url = new URL("http://localhost:3030/sensors");
+    var url = new URL("http://51.15.221.67:3030/sensors");
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
@@ -395,6 +395,9 @@ class RealtimeMode extends React.Component {
       // console.log(this.state.start_date_formatted);
       this.realtimeFetchData();
     }, 5000);
+    
+      document.title = "ATD - Realtime Mode";
+    
   }
 
   render() {
@@ -453,17 +456,7 @@ class RealtimeMode extends React.Component {
                   />
                 </div>
               </Col>
-            
-              <Col xs={24} >
-                <div class="box-container">
-                <Title level={2}>Ultrasonic Sensor</Title>
-                  <Chart
-                    class="chart"
-                    data={this.state.ultraChartData}
-                    options={this.state.lineChartOptions}
-                  />
-                </div>
-              </Col>
+          
             </Row>
           </div>
       </div>
