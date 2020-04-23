@@ -235,7 +235,7 @@ class HistoryMode extends React.Component {
   }
 
   fetchData() {
-    var url = new URL("http://51.15.221.67:3030/sensors");
+    var url = new URL("http://atd.arjunpuri.me/sensors");
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
