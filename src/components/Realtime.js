@@ -264,7 +264,7 @@ class RealtimeMode extends React.Component {
   // }
 
   realtimeFetchData() {
-    var url = new URL("http://atd.arjunpuri.me/sensors");
+    var url = new URL("http://atd.arjunpuri.me/api/sensors");
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
@@ -289,9 +289,9 @@ class RealtimeMode extends React.Component {
     fetch(url, requestOptions)
       .then((response) => response.text())
       .then((result) => {
-        console.log(result);
+        // console.log(result);
         const sensorData = JSON.parse(result);
-        console.log(sensorData);
+        // console.log(sensorData);
 
         // let sensorDates = [];
         // let sensorValues = [];

@@ -235,7 +235,8 @@ class HistoryMode extends React.Component {
   }
 
   fetchData() {
-    var url = new URL("http://atd.arjunpuri.me/sensors");
+    var url = new URL("http://atd.arjunpuri.me/api/sensors");
+    // var url = new URL("http://localhost:3030/api/sensors")
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
@@ -262,9 +263,9 @@ class HistoryMode extends React.Component {
     fetch(url, requestOptions)
       .then((response) => response.text())
       .then((result) => {
-        console.log(result);
+        // console.log(result);
         let sensorData = JSON.parse(result);
-        console.log(sensorData);
+        // console.log(sensorData);
 
         // For dates
 
@@ -345,7 +346,7 @@ class HistoryMode extends React.Component {
           ultraChartData: ultraChartData,
         });
       })
-      .catch((error) => console.log("error: ", error));
+      .catch((error) => console.error("error: ", error));
   }
 
   componentDidMount() {
