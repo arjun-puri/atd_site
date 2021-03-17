@@ -71,6 +71,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 # ATD Site
 
 This is a site created for our major project - Anti Theft Device
+
 Members: Arjun Puri, Ashish Kumar Meena, Manan Gulyani, Bhavya Khanna
 
 Site uses React.js with AntD for UI framework and Chartjs for showing charts.
